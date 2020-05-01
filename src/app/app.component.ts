@@ -6,9 +6,15 @@ import {Router} from '@angular/router';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  constructor(router:Router){}
+  constructor(private router:Router){}
 
+  gotoInput(){
+    this.router.navigate(['']);
+  }
   gotoList(){
-    
+    this.router.navigate(['/list']);
+  }
+  gotoEdit(){
+    this.router.navigate(['/edit']);
   }
 }

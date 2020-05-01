@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class GlobalVarService {
-  private jumlahid=2;
+  private jumlahid=1;
   private Data =[
     {
       id:0,
@@ -17,6 +17,6 @@ export class GlobalVarService {
   ];
 
   getData(){return this.Data;}
-  public setData(dataBaru){this.Data=dataBaru;}
-  
+  public tambahData(dataBaru){this.Data.push(dataBaru);}
+  getId(){this.jumlahid+=1;return this.jumlahid;}
 }
