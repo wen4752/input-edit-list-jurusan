@@ -9,12 +9,10 @@ export class AppComponent  {
   constructor(private router:Router){}
 
   gotoInput(){
-    this.router.navigate(['']);
+    this.router.navigate(['/input']);
   }
   gotoList(){
-    this.router.navigate(['/list']);
+    this.router.navigate(['']);
   }
-  gotoEdit(){
-    this.router.navigate(['/edit']);
-  }
+
 }

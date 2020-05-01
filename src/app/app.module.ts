@@ -12,9 +12,10 @@ import {Routes,RouterModule} from '@angular/router';
 
 
 const routes:Routes =[
-  {path:'',component:HalInputComponent},
-  {path:'edit',component:HalEditComponent},
-  {path:'list',component:HalListComponent}
+  {path:'input',component:HalInputComponent},
+  {path:'edit/:id',component:HalEditComponent},
+  {path:'',component:HalListComponent},
+  
 ];
 
 @NgModule({

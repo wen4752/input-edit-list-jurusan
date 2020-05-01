@@ -1,1 +1,9 @@
 <h1>LIST DATA</h1>
+<div *ngFor='let a of data'>
+<hr>
+Jurusan: <br>{{a.jurusan}}  <br><br>
+Penjelasan: 
+<br>{{a.penjelasan}}  <br><br>
+<button (click)='edit(a.id)'>Edit</button>
+</div>
+<hr>
