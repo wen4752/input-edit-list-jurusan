@@ -17,6 +17,7 @@ export class HalInputComponent implements OnInit {
   jurusan:String='';
   penjelasan:String='';
   databaru:any;
+  
   submit(){
     this.databaru=
       {
@@ -25,7 +26,10 @@ export class HalInputComponent implements OnInit {
         penjelasan:this.penjelasan
       }
     ;
-    this.globaldata.tambahData(this.databaru);
-    this.router.navigate(['']);
+    if(this.jurusan!='' && this.penjelasan!=''){
+      this.globaldata.tambahData(this.databaru);
+      this.router.navigate(['']); 
+    }
+    
   }
 }

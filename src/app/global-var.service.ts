@@ -19,4 +19,7 @@ export class GlobalVarService {
   getData(){return this.Data;}
   public tambahData(dataBaru){this.Data.push(dataBaru);}
   getId(){this.jumlahid+=1;return this.jumlahid;}
+  public updateData(dataupdate){
+    this.Data[dataupdate.id]=dataupdate;
+  }
 }

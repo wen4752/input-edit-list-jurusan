@@ -10,10 +10,28 @@ export class HalEditComponent implements OnInit {
 
   constructor(private globaldata:GlobalVarService, private router:Router,private aroute:ActivatedRoute) { }
 
-  idpass;
+  idpass=10;
+  data:any;
+  jurusan;
+  penjelasan;
+  databaru:any;
   ngOnInit() {
-    this.idpass= this.aroute.snapshot.paraMap.get('id');
+    let id= this.aroute.snapshot.paramMap.get('id');
+    this.idpass=id;
+    this.data=this.globaldata.getData();
+    this.jurusan=this.data[this.idpass].jurusan;
+    this.penjelasan=this.data[this.idpass].penjelasan;
   }
+  update(){
+    this.databaru={
+      id:this.idpass,
+      jurusan:this.jurusan,
+      penjelasan:this.penjelasan
+    };
+    this.globaldata.updateData(this.databaru);
+    this.router.navigate(['']);
+  }
+
 
 
 }
